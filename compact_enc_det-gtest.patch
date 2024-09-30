@@ -1,0 +1,13 @@
+--- compact_enc_det-d127078cedef9c6642cbe592dacdd2292b50bb19/CMakeLists.txt.orig	2024-09-29 21:59:31.665830673 +0200
++++ compact_enc_det-d127078cedef9c6642cbe592dacdd2292b50bb19/CMakeLists.txt	2024-09-29 22:00:15.105595339 +0200
+@@ -96,8 +96,8 @@ if (WIN32)
+ else()
+   target_link_libraries(ced_unittest
+                         ced
+-                        ${GTEST_LIB_DIR}/libgtest.a
+-                        ${GTEST_LIB_DIR}/libgtest_main.a
++                        -lgtest
++                        -lgtest_main
+                         ${EXTRA_TARGET_LINK_LIBRARIES}
+                         )
+ endif()
