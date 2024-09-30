@@ -4,7 +4,8 @@ Name:		compact_enc_det
 Version:	0
 %define	gitref	d127078cedef9c6642cbe592dacdd2292b50bb19
 %define	snap	20240213
-Release:	0.%{snap}.1
+%define	rel	2
+Release:	0.%{snap}.%{rel}
 License:	Apache v2.0
 Group:		Libraries
 Source0:	https://github.com/google/compact_enc_det/archive/%{gitref}/%{name}-%{snap}.tar.gz
@@ -72,7 +73,7 @@ Name: ced
 Description: Compact Encoding Detection library
 Version: %{version}
 Libs: -L${libdir} -lced
-Cflags: -I${inclucedir}
+Cflags: -I${includedir}
 EOF
 
 %clean
