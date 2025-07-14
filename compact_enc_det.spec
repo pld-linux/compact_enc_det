@@ -42,7 +42,7 @@ Pliki nagłówkowe biblioteki CED.
 
 %prep
 %setup -q -n %{name}-%{gitref}
-%patch0 -p1
+%patch -P0 -p1
 
 # because of gtest
 %{__sed} -i -e 's/-std=c++11/-std=c++14/' CMakeLists.txt
